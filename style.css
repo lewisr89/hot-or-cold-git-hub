@@ -53,6 +53,7 @@ body
 {
 background-image:url('images/hot-cold.jpg');
 background-color:#cccccc;
+background-size:cover;
 }
 
 
@@ -79,6 +80,8 @@ margin-right: auto;
 position: relative;
  text-align: center;
  white-space: nowrap;
+ text-decoration: underline;
+ margin-top: 20px;
 
 }
 p{
@@ -91,31 +94,15 @@ position: relative;
  color:black;
  font-family: arial;
 font-size:20px;
-margin:10px;
 font-weight: bold;
-white-space: nowrap;
+white-space: pre-line;
 width:540px;
 line-height: 25px;
-opacity:100%;
-top:-30px;
+top:0px;
+margin-top: 10px;
 }
 
-#question{
-    display: block;
-    position:relative;
-    padding:10px;
-}
-#clearbox{
-    display:block;
-    position: relative;
-    padding: 0px;
-    height: 38px;
-    background-color: white;
-    opacity: 0.4;
-    top:20px;
-    z-index: -1;
-}
-	input {
+input {
 	display: block;
     margin-left: auto;
     margin-right: auto;
