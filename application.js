@@ -12,7 +12,7 @@ $(document).ready(function() {
           
 
           if ((input == '') || (isNaN(input)) || (input < 1) || (input > 100)) { 
-                $('#message').html("Please put numbers 1-100");
+                $('#message').html("Please put in a number bewteen 1 and 100");
               }
 
           else if (guess == randomNumber){
