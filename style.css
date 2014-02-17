@@ -97,20 +97,23 @@ white-space: nowrap;
 width:540px;
 line-height: 25px;
 opacity:100%;
+top:-30px;
+}
+
+#question{
+    display: block;
+    position:relative;
+    padding:10px;
 }
 #clearbox{
-    position: absolute;
+    display:block;
+    position: relative;
     padding: 0px;
-    height: 14%;
-    width: 100%;
+    height: 38px;
     background-color: white;
-    margin-left: auto;
-    margin-right:auto;
     opacity: 0.4;
-    top:140px;
+    top:20px;
     z-index: -1;
-    padding: 0px;
-    left:0px;
 }
 	input {
 	display: block;
