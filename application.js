@@ -15,7 +15,6 @@ $(document).ready(function() {
                 $('#message').html("Please put in a number bewteen 1 and 100");
 
               //Reset Text Box
-              $('#message').html("");
               $('#message').focus();
               //Return back to user to make proper guess!
               return;
@@ -42,7 +41,14 @@ $(document).ready(function() {
               $('#guess').val('');
          
 	});
-
+    
+    $('#guess').keypress(function (event) {
+        if (event.keyCode == 13) {
+            $("#submitButton").click();
+           
+            return false;
+        } 
+    });
 
 $('#newGame').click(function(){
     randomNumber = Math.floor(Math.random() * 101);
