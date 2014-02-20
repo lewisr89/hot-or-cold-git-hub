@@ -41,8 +41,6 @@ $(document).ready(function() {
               $('#prevGuess').append(input).append(', ');
               $('#guess').val('');
          
-          //onkeydown="if (event.keyCode == 13) document.getElementById('submitButton').click()"
-
 	});
 
 
