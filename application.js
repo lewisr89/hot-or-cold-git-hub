@@ -42,20 +42,17 @@ $(document).ready(function() {
          
 	});
     
-
-$('#guess').keypress(function (event) {
+    $('#guess').keypress(function (event) {
         if (event.keyCode == 13) {
+            $("#submitButton").click();
            
-           handleGuess(event);
-           
-            return false;
+            event.preventDefault();
         } 
     });
 
-
 $('#newGame').click(function(){
     answer = Math.floor(Math.random() * 101);
-    console.log(answer);
+    console.log(randomNumber);
     $("#congrats").hide();
     $('#message').html('');
     $('#prevGuess').html('');
