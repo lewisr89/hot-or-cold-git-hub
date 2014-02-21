@@ -96,7 +96,7 @@ position: relative;
 font-size:20px;
 font-weight: bold;
 white-space: pre-line;
-width:540px;
+width:530px;
 line-height: 25px;
 top:0px;
 margin-top: 10px;
@@ -110,6 +110,7 @@ input {
     width: 100px;
     height:25px;
     top: 0px;
+    text-align: center;
 
 }
 
@@ -127,6 +128,7 @@ input {
     font-weight: bold;
     top:0px;
 }
+
 
 #submitButton, #newGame{ 
     position: relative;

@@ -2,8 +2,8 @@
 $(document).ready(function() {
 
 	//Generate a random number between 1 and 100
-	var randomNumber = Math.floor(Math.random() * 101);
-    console.log(randomNumber);
+	var answer = Math.floor(Math.random() * 101);
+    console.log(answer);
     
     $('#submitButton').click(function(){
           var input = $('#guess').val();
@@ -12,7 +12,7 @@ $(document).ready(function() {
     
 
           if ((guess == '') || (isNaN(guess)) || (guess < 1) || (guess > 100)) { 
-                $('#message').html("Please put in a number bewteen 1 and 100");
+                $('#message').html("Please put in a number between 1 and 100");
 
               //Reset Text Box
               $('#message').focus();
@@ -20,16 +20,16 @@ $(document).ready(function() {
               return;
             }
 
-          else if (guess == randomNumber){
+          else if (guess == answer){
                 $("#message").html("You guessed it right!!").effect("pulsate", {times:4}, 2000);;
                 $("#congrats").show(1000);
               }
 
-          else if (guess < (randomNumber+10) && guess > (randomNumber-10)){
+          else if (guess < (answer+10) && guess > (answer-10)){
                 $("#message").html("Really Hot!");
               }
 
-          else if (guess < (randomNumber+20) && guess> (randomNumber-20)){
+          else if (guess < (answer+20) && guess> (answer-20)){
                 $("#message").html("Hot");
               }
 
@@ -42,17 +42,20 @@ $(document).ready(function() {
          
 	});
     
-    $('#guess').keypress(function (event) {
+
+$('#guess').keypress(function (event) {
         if (event.keyCode == 13) {
-            $("#submitButton").click();
+           
+           handleGuess(event);
            
             return false;
         } 
     });
 
+
 $('#newGame').click(function(){
-    randomNumber = Math.floor(Math.random() * 101);
-    console.log(randomNumber);
+    answer = Math.floor(Math.random() * 101);
+    console.log(answer);
     $("#congrats").hide();
     $('#message').html('');
     $('#prevGuess').html('');
