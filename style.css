@@ -152,7 +152,7 @@ input {
 }
 
 
-#message{
+#message, #colder, #hotter{
 		display: block;
 	margin-left: auto;
     margin-right: auto;

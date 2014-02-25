@@ -10,7 +10,7 @@ $(document).ready(function() {
           var guess= Math.abs(input);
           
     
-
+          //Check if the input is valid
           if ((guess == '') || (isNaN(guess)) || (guess < 1) || (guess > 100)) { 
                 $('#message').html("Please put in a number between 1 and 100");
 
@@ -20,6 +20,7 @@ $(document).ready(function() {
               return;
             }
 
+          //Check if the input is correct, hot, or cold  
           else if (guess == answer){
                 $("#message").html("You guessed it right!!").effect("pulsate", {times:4}, 2000);;
                 $("#congrats").show(1000);
@@ -37,11 +38,20 @@ $(document).ready(function() {
                 $("#message").html("Cold");
               }
 
-              $('#prevGuess').append(input).append(', ');
-              $('#guess').val('');
-         
+    
+        //List Guesses on the bottom
+         if  ($("#prevGuess").html()==''){ 
+
+         		$('#prevGuess').append(input)
+         		$('#guess').val('');}
+         else { 
+         	    $('#prevGuess').append(', ').append(input);
+                $('#guess').val('');
+            }
+                 
 	});
     
+    //Allows the enter key to be functional
     $('#guess').keypress(function (event) {
         if (event.keyCode == 13) {
             $("#submitButton").click();
@@ -50,9 +60,11 @@ $(document).ready(function() {
         } 
     });
 
+
+//Starts a New Game
 $('#newGame').click(function(){
     answer = Math.floor(Math.random() * 101);
-    console.log(randomNumber);
+    console.log(answer);
     $("#congrats").hide();
     $('#message').html('');
     $('#prevGuess').html('');
